@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gourmet Horizon | Experiência Gastronômica Única</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header id="header">
+        <nav class="container">
+            <div class="logo">Horizonte<span>Gourmet</span></div>
+            <ul class="nav-links">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#contact">Reservas</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero"
+            style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('hero.png');">
+            <div class="container hero-content">
+                <h1>Sinta o Sabor da Perfeição</h1>
+                <p>Uma jornada gastronômica que desperta todos os seus sentidos no coração da cidade.</p>
+                <a href="#contact" class="btn">Reservar uma Mesa</a>
+            </div>
+        </section>
+
+        <section id="about" class="container about">
+            <div class="about-text">
+                <h2>Nossa História</h2>
+                <p>No Gourmet Horizon, acreditamos que a comida é uma forma de arte. Desde a seleção cuidadosa dos
+                    ingredientes mais frescos até a apresentação final no prato, cada detalhe é pensado para
+                    proporcionar uma experiência inesquecível.</p>
+                <p>Nossa cozinha fusion combina técnicas clássicas com sabores locais contemporâneos, criando algo
+                    verdadeiramente único em cada mordida.</p>
+            </div>
+            <div class="about-image">
+                <img src="dish1.png" alt="Nosso prato assinatura">
+            </div>
+        </section>
+
+        <section id="menu" class="menu">
+            <div class="container">
+                <h2 class="section-title">Destaques do Chef</h2>
+                <div class="menu-grid">
+                    <div class="menu-card">
+                        <img src="dish1.png" alt="Steak Gourmet">
+                        <div class="menu-info">
+                            <h3>Filet Mignon au Jus</h3>
+                            <p>Corte nobre grelhado no ponto perfeito, acompanhado de legumes rústicos e molho de vinho
+                                tinto.</p>
+                            <span class="price">R$ 89,00</span>
+                        </div>
+                    </div>
+                    <div class="menu-card">
+                        <img src="dish2.png" alt="Pasta de Frutos do Mar">
+                        <div class="menu-info">
+                            <h3>Tagliatelle de Mare</h3>
+                            <p>Massa fresca artesanal com camarões, mexilhões e tomates cereja confitados em ervas
+                                finas.</p>
+                            <span class="price">R$ 75,00</span>
+                        </div>
+                    </div>
+                    <div class="menu-card">
+                        <img src="dish3.png" alt="Sobremesa de Chocolate">
+                        <div class="menu-info">
+                            <h3>Petit Gâteau Noir</h3>
+                            <p>Bolo de chocolate amargo com centro derretido, folha de ouro comestível e coulis de
+                                framboesa.</p>
+                            <span class="price">R$ 38,00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container contact-wrapper">
+                <div class="contact-info">
+                    <h2>Faça sua Reserva</h2>
+                    <p>Estamos ansiosos para recebê-lo. Preencha o formulário ou entre em contato diretamente.</p>
+                    <div class="contact-details">
+                        <p>📍 Av. Gourmet, 123 - Centro</p>
+                        <p>📞 (11) 99999-8888</p>
+                        <p>✉️ contato@gourmethorizon.com</p>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <input type="text" placeholder="Seu Nome" required>
+                    <input type="email" placeholder="Seu E-mail" required>
+                    <input type="date" required>
+                    <select>
+                        <option value="1">1 Pessoa</option>
+                        <option value="2">2 Pessoas</option>
+                        <option value="3">3 Pessoas</option>
+                        <option value="4+">4 ou mais</option>
+                    </select>
+                    <button type="submit" class="btn">Confirmar Reserva</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Gourmet Horizon. Todos os direitos reservados.</p>
+            <div class="socials">
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+                <a href="#">TripAdvisor</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+
+</html>
